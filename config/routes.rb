@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :microposts
   resources :users
   root 'users#index'
-  get  'microposts',    to: :index, controller: 'microposts'
-  get  '/microposts/new',   to: :new, controller: 'microposts'
-  get  '/microposts/edit',   to: :edit, controller: 'microposts'
+  get  '/microposts',    to: 'microposts#show', as: 'show'
+  get  '/microposts/new',   to: 'microposts#mew'
+  get  '/microposts/edit', to: 'microposts#edit'
 end
